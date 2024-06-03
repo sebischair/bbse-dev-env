@@ -12,12 +12,10 @@ module.exports = {
       provider: function () {
         return new HDWalletProvider({
           privateKeys: [process.env.PRIVATE_KEY_1],
-          providerOrUrl: `https://sepolia.infura.io/v3/${process.env.INFURA_API_KEY}`,
+          providerOrUrl: process.env.SEPOLIA_RPC_ENDPOINT,
           numberOfAddresses: 1,
         });
       },
-      gas: 5000000,
-      gasPrice: 5000000000, // 5 gwei
       network_id: 11155111,
     },
   },
